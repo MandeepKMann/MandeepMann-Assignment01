@@ -1,0 +1,138 @@
+@use "setup";
+
+$mainColor: #f0f5ff;
+$buttonColor1: #f5c8cf;
+$buttonColor2: #042259;
+$fontcolor1: #1d81cc;
+$fontColor2: #1f2022;
+
+// General Styles
+
+html {
+    font-size: 125%;
+    color: $fontColor2;
+    font-family: 'Emblema One', cursive;
+    background-color: $mainColor;
+}
+
+h1,
+h2,
+h3,
+p,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.wrapper {
+    max-width: 1080px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+section {
+    padding: 100px 0;
+}
+
+h1, h2 {
+    color: $fontcolor1;
+}
+
+p {
+    font-family: 'Barlow', sans-serif;
+}
+
+// Header Styles
+
+header {
+    background-image: url(../../assets/header-alt.png);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    padding: 50px 0;
+    border: 2px solid red;
+}
+
+
+.mainNav ul {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    margin-left: 35rem;
+
+        li {
+            font-family: 'Catamaran', sans-serif;
+        }
+}
+
+
+
+
+// About Styles
+.aboutFlex {
+    display: flex;
+    flex-direction: column;
+        .newAppliances {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+            .gallery {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+
+                .gallery li {
+                    width: calc((100% / 3) - 20px);
+                    margin: 0 0 20px;
+                    // this margin looks WEIRD
+                }
+}
+
+.coffeeAppliances {
+    display: flex;
+    flex-wrap: wrap;
+        .imgContainer {
+            width: 25%;
+            margin-right: 30px;
+        }
+        .textContainer {
+            max-width: 38rem;
+        }
+    }
+    
+    
+    
+    
+.textContainer button {
+    background-color: $buttonColor2;
+    color: $mainColor;
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
