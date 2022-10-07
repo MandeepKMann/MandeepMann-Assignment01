@@ -131,39 +131,35 @@ header {
 // About Styles
 
 .about {
-    height: 100%;
-
-}
-
-.aboutFlex {
-    display: flex;
-    flex-direction: column;
-        .newAppliances {
+    height: 100%;  
+        .aboutFlex {
             display: flex;
             flex-direction: column;
-            align-items: center;
-            margin-bottom: 70px;
-        }
-            .gallery {
+                .newAppliances {
                 display: flex;
-                flex-direction: row;
-                flex-wrap: wrap;
-                justify-content: space-between;
-                width: 100%;
-            }
-
-                .gallery li {
-                    width: calc((100% / 3) - 20px);
-                    // this margin needs to be BIGGER
+                flex-direction: column;
+                align-items: center;
+                margin-bottom: 70px;
                 }
+        }
+
 }
 
-.gallery li:nth-child(2) {
-    margin: 0 10px;
-}
-
-.gallery img {
+.gallery {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
     width: 100%;
+        .gallery li {
+            width: calc((100% / 3) - 20px);
+                .gallery li:nth-child(2) {
+                    margin: 0 10px;
+                        .gallery img {
+                                width: 100%;
+                        }
+                }
+        }
 }
 
 .newAppliances h2 {
@@ -177,27 +173,25 @@ header {
             width: 24%;
             margin-right: 30px;
         }
-        .textContainer {
-            max-width: 45.4rem;
-            height: auto;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-    }
+}
     
-    
-.textContainer h2 {
+.textContainer {
+    max-width: 45.4rem;
+    height: auto;
     display: flex;
-    margin-bottom: 15px;
-        .textContainer p {
+    flex-direction: column;
+    justify-content: space-between;
+        h2 {
+        margin-bottom: 15px;
+        
+        p {
             margin-bottom: 20px;
         }
-}    
+        }
+}  
 
 .textContainer button {
-width: 18%;
-min-width: 165px;
+width: 165px;
 background-color: $buttonColor2;
 color: $secondaryColor;
 font-family: 'Emblema One', cursive;
@@ -210,6 +204,74 @@ margin-bottom: 0;
 }
 
 
+// Media Queries
+
+@media (max-width: 1388px) {
+    .imgContainer {
+        width: 30%;
+    }
+    .textContainer {
+        width: 70%;
+    }
+}
+
+
+@media (max-width: 1350px) {
+    .gallery li:nth-child(2) {
+        margin: 0 10px;
+    }
+
+    .gallery li {
+        width: calc((100% / 3 - 20px));
+    }
+}
+
+@media (max-width: 1000px) {
+    .gallery li:nth-child(3) {
+        display: none;
+    }
+
+    .gallery li:nth-child(2) {
+        margin: 0 0 0 5px;
+    }
+
+    .gallery li:nth-child(1) {
+        margin: 0 5px 0 0;
+    }
+
+    .gallery li {
+        width: calc((100% / 2) - 10px);
+            img {
+                width: 100%;
+            }
+    }
+
+    .coffeeAppliances {
+        flex-direction: column;
+            .imgContainer {
+                width: 100%;
+                height: 100%;
+                max-height: 700px;
+                display: flex;
+                justify-content: center;
+                    img {
+                        width: 75%;
+                    }
+            }
+    }
+
+
+
+    .textContainer {
+        margin-top: 70px;
+        align-self: center;
+            h2 {
+                max-width:450px;
+                align-self: center;
+                text-align: center;
+            }
+    }
+}
 
 
 

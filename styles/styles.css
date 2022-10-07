@@ -346,8 +346,7 @@ header .headerFlex h1 {
 .about {
   height: 100%;
 }
-
-.aboutFlex {
+.about .aboutFlex {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -356,7 +355,7 @@ header .headerFlex h1 {
       -ms-flex-direction: column;
           flex-direction: column;
 }
-.aboutFlex .newAppliances {
+.about .aboutFlex .newAppliances {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -369,7 +368,8 @@ header .headerFlex h1 {
           align-items: center;
   margin-bottom: 70px;
 }
-.aboutFlex .gallery {
+
+.gallery {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -384,15 +384,13 @@ header .headerFlex h1 {
           justify-content: space-between;
   width: 100%;
 }
-.aboutFlex .gallery li {
+.gallery .gallery li {
   width: calc(33.3333333333% - 20px);
 }
-
-.gallery li:nth-child(2) {
+.gallery .gallery li .gallery li:nth-child(2) {
   margin: 0 10px;
 }
-
-.gallery img {
+.gallery .gallery li .gallery li:nth-child(2) .gallery img {
   width: 100%;
 }
 
@@ -411,7 +409,8 @@ header .headerFlex h1 {
   width: 24%;
   margin-right: 30px;
 }
-.coffeeAppliances .textContainer {
+
+.textContainer {
   max-width: 45.4rem;
   height: auto;
   display: -webkit-box;
@@ -425,20 +424,15 @@ header .headerFlex h1 {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-
 .textContainer h2 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   margin-bottom: 15px;
 }
-.textContainer h2 .textContainer p {
+.textContainer h2 p {
   margin-bottom: 20px;
 }
 
 .textContainer button {
-  width: 18%;
-  min-width: 165px;
+  width: 165px;
   background-color: #042259;
   color: #f0f5ff;
   font-family: "Emblema One", cursive;
@@ -448,4 +442,69 @@ header .headerFlex h1 {
   text-align: center;
   margin-top: 1rem;
   margin-bottom: 0;
+}
+
+@media (max-width: 1388px) {
+  .imgContainer {
+    width: 30%;
+  }
+  .textContainer {
+    width: 70%;
+  }
+}
+@media (max-width: 1350px) {
+  .gallery li:nth-child(2) {
+    margin: 0 10px;
+  }
+  .gallery li {
+    width: calc(33.3333333333% - 20px);
+  }
+}
+@media (max-width: 1000px) {
+  .gallery li:nth-child(3) {
+    display: none;
+  }
+  .gallery li:nth-child(2) {
+    margin: 0 0 0 5px;
+  }
+  .gallery li:nth-child(1) {
+    margin: 0 5px 0 0;
+  }
+  .gallery li {
+    width: calc(50% - 10px);
+  }
+  .gallery li img {
+    width: 100%;
+  }
+  .coffeeAppliances {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .coffeeAppliances .imgContainer {
+    width: 100%;
+    height: 100%;
+    max-height: 700px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .coffeeAppliances .imgContainer img {
+    width: 75%;
+  }
+  .textContainer {
+    margin-top: 70px;
+    -ms-flex-item-align: center;
+        align-self: center;
+  }
+  .textContainer h2 {
+    max-width: 450px;
+    -ms-flex-item-align: center;
+        align-self: center;
+    text-align: center;
+  }
 }
