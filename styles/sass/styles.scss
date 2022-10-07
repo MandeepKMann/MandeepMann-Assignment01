@@ -1,6 +1,7 @@
 @use "setup";
 
 $mainColor: #f0f5ff;
+$secondaryColor: #fcdde2;
 $buttonColor1: #f5c8cf;
 $buttonColor2: #042259;
 $fontcolor1: #1d81cc;
@@ -39,7 +40,7 @@ img {
 }
 
 .wrapper {
-    max-width: 1080px;
+    max-width: 1240px;
     width: 90%;
     margin: 0 auto;
 }
@@ -50,6 +51,11 @@ section {
 
 h1, h2 {
     color: $fontcolor1;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 2.1rem;
 }
 
 p {
@@ -61,10 +67,11 @@ p {
 header {
     background-image: url(../../assets/header-alt.png);
     height: 100vh;
-    background-size: cover;
+    background-size: 100%;
     background-position: center;
+    background-repeat: no-repeat;
     padding: 50px 0;
-    border: 2px solid red;
+    // fix positioning of background
 }
 
 
@@ -83,6 +90,11 @@ header {
 
 
 // About Styles
+.about {
+    background-color: $secondaryColor;
+    height: 100%;
+}
+
 .aboutFlex {
     display: flex;
     flex-direction: column;
@@ -90,43 +102,72 @@ header {
             display: flex;
             flex-direction: column;
             align-items: center;
+            margin-bottom: 70px;
         }
             .gallery {
                 display: flex;
                 flex-direction: row;
                 flex-wrap: wrap;
                 justify-content: space-between;
+                width: 100%;
             }
 
                 .gallery li {
                     width: calc((100% / 3) - 20px);
-                    margin: 0 0 20px;
-                    // this margin looks WEIRD
+                    // this margin needs to be BIGGER
                 }
+}
+
+.gallery li:nth-child(2) {
+    margin: 0 10px;
+}
+
+.gallery img {
+    width: 100%;
+}
+
+.newAppliances h2 {
+    margin-bottom: 70px;
 }
 
 .coffeeAppliances {
     display: flex;
     flex-wrap: wrap;
         .imgContainer {
-            width: 25%;
+            width: 24%;
             margin-right: 30px;
         }
         .textContainer {
-            max-width: 38rem;
+            max-width: 45.4rem;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
     }
     
     
-    
-    
+.textContainer h2 {
+    display: flex;
+    margin-bottom: 15px;
+        .textContainer p {
+            margin-bottom: 20px;
+        }
+}    
+
 .textContainer button {
-    background-color: $buttonColor2;
-    color: $mainColor;
-    border: none;
-    padding: 15px 32px;
-    text-align: center;
+width: 18%;
+background-color: $buttonColor2;
+color: $mainColor;
+font-family: 'Emblema One', cursive;
+text-transform: uppercase;
+border: none;
+padding: 10px 15px;
+text-align: center;
+margin-top: 1rem;
+margin-bottom: 0;   
 }
+
 
 
 
