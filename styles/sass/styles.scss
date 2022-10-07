@@ -99,13 +99,17 @@ header {
             }
 }
 
+.mainNav {
+    width: auto;
+}
+
 .mainNav ul {
     display: flex;
-    justify-content: space-between;
-    margin-top: 1rem;
-    margin-left: 35rem;
+    justify-content: right;
+    width: 100%;
         li {
             font-family: 'Catamaran', sans-serif;
+            margin-left: 1rem;
         }
 }
 
@@ -116,9 +120,9 @@ header {
     bottom: 600px;
     right: 40px;
         i {
-                color: $fontcolor1;
-                margin-bottom: 10px;
-            }
+            color: $fontcolor1;
+            margin-bottom: 10px;
+        }
 }
 
 
@@ -193,6 +197,7 @@ header {
 
 .textContainer button {
 width: 18%;
+min-width: 165px;
 background-color: $buttonColor2;
 color: $secondaryColor;
 font-family: 'Emblema One', cursive;
