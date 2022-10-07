@@ -15,25 +15,34 @@
     <!-- Header -->
     <header><!--Header Background-->
         <div class="wrapper headerFlex">
-            <!-- Main Navigation -->
-            <nav class="mainNav">
-                <ul>
-                    <li><a href="#home">HOME</a></li>
-                    <li><a href="#about">ABOUT</a></li>
-                    <li><a href="#blog">BLOG</a></li>
-                    <li><a href="#contact">CONTACT</a></li>
-                </ul>
-            </nav>
-            <!-- Social Media Navigation -->
-            <nav class="socialNav">
-                <ul> <!--Learned about  target="_blank" from freecodecamp-->
-                    <li><a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
-                    <li><a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></li>
-                    <!-- There is no filled sc icon in fa and I didn't want to use svg (: -->
-                    <li><a href="https://www.snapchat.com/" target="_blank"><i class="fa-brands fa-snapchat"></i></a></li>
-                    <li><a href="https://twitter.com/" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
-                </ul>
-            </nav>
+            <!-- Navigation Bars - Mobile-Navigation @media (max-width: 700px) -->
+            <div class="navBars">
+                <input type="checkbox" id="navToggle" class="navToggle" />
+                <label for="navToggle" class="navToggleLabel">
+                    <div class="hamburgerIcon"></div>
+                    <div class="hamburgerIcon"></div>
+                    <div class="hamburgerIcon"></div>
+                </label>
+                <!-- Main Navigation -->
+                <nav class="mainNav">
+                    <ul>
+                        <li><a href="#home">HOME</a></li>
+                        <li><a href="#about">ABOUT</a></li>
+                        <li><a href="#blog">BLOG</a></li>
+                        <li><a href="#contact">CONTACT</a></li>
+                    </ul>
+                </nav>
+                <!-- Social Media Navigation -->
+                <nav class="socialNav">
+                    <ul> <!--Learned about  target="_blank" from freecodecamp-->
+                        <li><a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></li>
+                        <!-- There is no filled sc icon in fa and I didn't want to use svg (: -->
+                        <li><a href="https://www.snapchat.com/" target="_blank"><i class="fa-brands fa-snapchat"></i></a></li>
+                        <li><a href="https://twitter.com/" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
+                    </ul>
+                </nav>
+            </div><!--END .navBars-->
             <div class="headings">
                 <h1>ELECTRIC SELECT</h1>
                 <h3>best home appliances</h3> 

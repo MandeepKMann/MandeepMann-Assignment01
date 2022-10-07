@@ -109,7 +109,7 @@ header {
     width: 100%;
         li {
             font-family: 'Catamaran', sans-serif;
-            margin-left: 1rem;
+            margin-left: 20px;
         }
 }
 
@@ -125,6 +125,13 @@ header {
         }
 }
 
+.navToggleLabel {
+    display: none;
+}
+
+.navToggle {
+    display: none;
+}
 
 
 
@@ -260,21 +267,90 @@ margin-bottom: 0;
             }
     }
 
-
-
     .textContainer {
         margin-top: 70px;
         align-self: center;
             h2 {
-                max-width:450px;
+                width:450px;
                 align-self: center;
                 text-align: center;
+            }
+
+            button {
+                align-self: center;
             }
     }
 }
 
 
+@media (max-width: 720px) {
+    .hamburgerIcon {
+        width: 60px;
+        height: 5px;
+        background-color: $buttonColor2;
+        margin-bottom: 10px;
+        border-radius: 4px;
+        // Was initially using 25% to round the corners but it was not working so I found how to make rounded corners from https: //css-tricks.com/forums/topic/how-to-create-a-navbar-with-rounded-corners/
+    }
+    
+    .navToggleLabel {
+            position: absolute;
+            display: block;
+            top: 0;
+            right: 0;
+            padding-right: 1rem;
+            padding-top: 1rem;
+            margin-top: 1.5rem;
+            margin-right: .5rem;
+    }
+    
+    .mainNav, .socialNav {
+        display: none;
+    }
+    
+    .socialNav ul {
+        display: flex;
+        flex-direction: row;
+    }
 
+    .socialNav i {
+        padding: 10px;
+    }
+    
+    
+
+    .mainNav ul li {
+        text-align: center;
+        padding: 10px;
+        margin-left: 0;
+    }
+
+    
+    .navBars {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        background: $mainColor;
+        border: 2px solid red;
+        // position: absolute;
+        }
+
+        
+        .navToggle:checked ~ nav{
+            display: flex;
+            align-self: center;
+            position: static;
+            justify-content: center;
+            width: auto;
+        }
+
+        .navToggle:checked ~ .mainNav ul {
+            flex-direction: column;
+        }
+
+    }
+    
 
 
 
