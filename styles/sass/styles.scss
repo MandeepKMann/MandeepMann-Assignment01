@@ -76,16 +76,16 @@ p {
 
 
 
-
 // Header Styles
 
 header {
-    background-image: url(../assets/header-alt.png);
+    // used this for a refresh on linear gradients https: //developer.mozilla.org/en-US/docs/Web/CSS/gradient/linear-gradient
+    background: url(../assets/header-group-appliances.png), linear-gradient(110deg, $mainColor 60%, $secondaryColor);
     height: 100vh;
-    background-size: cover;
-    background-position: center;
+    width: 100%;
+    background-size: auto;
+    background-position: right bottom;
     background-repeat: no-repeat;
-    padding: 50px 0 0 0;
     position: relative;
         .headerFlex {
                 display: flex;
@@ -95,12 +95,12 @@ header {
                         margin-top: 150px;
                         margin-bottom: 5px;
                     }
-        
-            }
+        }
 }
 
 .mainNav {
     width: auto;
+    padding: 50px 0 0 0;
 }
 
 .mainNav ul {
@@ -109,6 +109,7 @@ header {
     width: 100%;
         li {
             font-family: 'Catamaran', sans-serif;
+            color: $buttonColor2;
             margin-left: 20px;
         }
 }
@@ -234,6 +235,12 @@ margin-bottom: 0;
 }
 
 @media (max-width: 1000px) {
+
+    header {
+        background-size: 90%;
+        background-position-x: 220%;
+    }
+
     .gallery li:nth-child(3) {
         display: none;
     }
@@ -253,6 +260,7 @@ margin-bottom: 0;
             }
     }
 
+
     .coffeeAppliances {
         flex-direction: column;
             .imgContainer {
@@ -270,6 +278,7 @@ margin-bottom: 0;
     .textContainer {
         margin-top: 70px;
         align-self: center;
+        width: 100%;
             h2 {
                 width:450px;
                 align-self: center;
@@ -310,48 +319,71 @@ margin-bottom: 0;
     
     .socialNav ul {
         display: flex;
+        justify-content: space-around;
         flex-direction: row;
+        width: 100%;
     }
 
     .socialNav i {
-        padding: 10px;
+        padding: 15px;
+        font-size: 2rem;
+        margin-top: 40px;
+        border: 2px solid red;
     }
     
     
-
+    
     .mainNav ul li {
         text-align: center;
         padding: 10px;
         margin-left: 0;
+        font-size: 1.5rem;
+        margin-top: 80px;
+        width: 90%;
+        align-self: center;
     }
 
     
     .navBars {
-        display: flex;
-        flex-direction: column;
+        // display: flex;
+        // flex-direction: column;
         width: 100%;
         height: auto;
         background: $mainColor;
-        border: 2px solid red;
-        // position: absolute;
+        position: absolute;
+        left: 0;
         }
 
         
-        .navToggle:checked ~ nav{
-            display: flex;
-            align-self: center;
-            position: static;
-            justify-content: center;
-            width: auto;
-        }
+    .navToggle:checked ~ nav{
+        display: flex;
+        align-self: center;
+        position: static;
+        justify-content: center;
+        width: auto;
+    }
 
-        .navToggle:checked ~ .mainNav ul {
-            flex-direction: column;
-        }
+    .navToggle:checked ~ .mainNav ul {
+        flex-direction: column;
+    }
 
+
+    h1 {
+        font-size: 15vw;
     }
     
+} 
+    
+@media (max-width: 500px) {
+    .textContainer h2 {
+        width: auto;
+    }
 
+}
+
+@media (max-width: 430px) {
+
+}
 
 
 
