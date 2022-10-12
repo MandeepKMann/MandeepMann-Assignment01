@@ -235,6 +235,8 @@ html {
 h1,
 h2,
 h3,
+h4,
+h5,
 p,
 ul {
   margin: 0;
@@ -265,6 +267,16 @@ section {
   padding: 100px 0;
 }
 
+li a:hover,
+li a:focus,
+button:hover,
+button:focus,
+.navToggle:hover,
+.navToggle:focus {
+  font-style: oblique;
+  text-decoration: underline;
+}
+
 h1 {
   font-size: 5.23rem;
 }
@@ -282,6 +294,20 @@ h2 {
 h3 {
   font-family: "Catamaran", sans-serif;
   color: #042259;
+}
+
+h4 {
+  font-family: "Emblema One", cursive;
+  color: #1d81cc;
+  font-size: 1.56;
+  text-transform: uppercase;
+}
+
+h5 {
+  font-family: "Emblema One", cursive;
+  color: #1d81cc;
+  font-size: 0.9;
+  text-transform: uppercase;
 }
 
 p {
@@ -504,6 +530,119 @@ header .headerFlex h1 {
   background-color: #f5c8cf;
 }
 
+.contact {
+  padding: 0;
+  background: #f0f5ff;
+}
+
+.contactIcons {
+  background: #fcdde2;
+  padding: 150px 0;
+}
+
+.contactIcons ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  text-align: center;
+}
+.contactIcons ul i {
+  font-size: 2rem;
+  color: #042259;
+}
+
+.contactInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 100px 0;
+}
+
+.contactFlex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+.contact button {
+  width: 165px;
+  background-color: #f5c8cf;
+  color: #042259;
+  margin: 0;
+}
+
+form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  margin-top: 20px;
+}
+form input {
+  height: 50px;
+  padding: 0 15px;
+  border: 1px solid #f5c8cf;
+  width: 80%;
+}
+
+.flexContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+
+.subscribe {
+  width: 100%;
+  margin-right: 100px;
+}
+
+.contactNav li {
+  font-family: "Emblema One", cursive;
+  color: #1d81cc;
+  font-size: 0.9;
+  text-transform: uppercase;
+  text-align: end;
+  padding-bottom: 25px;
+  max-height: 30px;
+}
+
+footer {
+  background: #042259;
+  color: #f0f5ff;
+  text-align: center;
+}
+
 @media (max-width: 1453px) {
   .blogWrapper1, .blogWrapper2 {
     padding-top: 100px;
@@ -532,6 +671,9 @@ header .headerFlex h1 {
   }
 }
 @media (max-width: 1300px) {
+  .blog {
+    background: #fcdde2;
+  }
   .blogWrapper1,
 .blogWrapper2 {
     max-width: 1240px;
@@ -564,6 +706,9 @@ header .headerFlex h1 {
     -webkit-box-ordinal-group: 0;
         -ms-flex-order: -1;
             order: -1;
+  }
+  .contactIcons {
+    background: #f5c8cf;
   }
 }
 @media (max-width: 1000px) {
@@ -623,6 +768,37 @@ header .headerFlex h1 {
         align-self: center;
   }
 }
+@media (max-width: 900px) {
+  .contactFlex {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .flexContainer {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .subscribe {
+    margin: 0 auto 20px auto;
+    text-align: center;
+  }
+  .subscribe form {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .subscribe form input {
+    padding: 0;
+    width: 100%;
+  }
+  .info, .contactNav {
+    width: 50%;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+  }
+}
 @media (max-width: 720px) {
   .hamburgerIcon {
     width: 60px;
@@ -660,7 +836,6 @@ header .headerFlex h1 {
     padding: 15px;
     font-size: 2rem;
     margin-top: 40px;
-    border: 2px solid red;
   }
   .mainNav ul li {
     text-align: center;
@@ -700,9 +875,43 @@ header .headerFlex h1 {
   h1 {
     font-size: 15vw;
   }
+  .contactIcons {
+    background: #f5c8cf;
+    padding: 15px 0 15px 0;
+  }
+  .contactIcons .contact ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .contactIcons ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .contactIcons ul li {
+    margin: 30px 0;
+  }
 }
 @media (max-width: 500px) {
   .coffeeAppliances h2 {
     width: auto;
+  }
+  h2 {
+    font-size: 1.8rem;
+  }
+  form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .contact button {
+    margin-top: 10px;
   }
 }
